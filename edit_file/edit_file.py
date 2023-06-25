@@ -7,5 +7,15 @@ def write(text):
     f.write('New input: {}\n'.format(text))
     f.close()
 
+def get_file():
+    f = open('edit_file.txt','r')
+    r = f.read()
+    f.close()
+    return r
+
 text = st.text_input('Text')
 st.button('Add text to file',on_click = write,args = [text])
+
+st.download_button('Download text',get_file(),'text_file.txt')
+
+
