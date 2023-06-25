@@ -3,8 +3,9 @@ from github import Auth
 import streamlit as st
 
 GITHUB_REPO = 'streamlit-pygithub-storage'
+GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
 
-auth = Auth.Token("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")
+auth = Auth.Token(GITHUB_TOKEN)
 g = Github(auth=auth)
 
 
