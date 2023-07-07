@@ -2,6 +2,8 @@ from github import Github
 from github import Auth
 import streamlit as st
 
+st.write(st.experimental_user)
+
 GITHUB_REPO = 'streamlit-pygithub-storage'
 GITHUB_TOKEN = st.secrets["GITHUB_TOKEN"]
 
